@@ -9,12 +9,10 @@ import java.util.concurrent.CountDownLatch;
  *
  * CountDownLatch
  * CountDownLatch类似是一个计数器，他可以实现需要所有任务都执行完毕才可以执行接下来的任务，日常场景中我们可以使用他来做并行分布运算，借用多核cpu对数据分别进行计算，然后再汇总，也可以实现在加载某些东西前初始化一些信息。
- *
  * 作者：你干么那么凶
  * 链接：https://www.jianshu.com/p/4f8b6a761da7
  * 来源：简书
  * 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
- *
  */
 public class CountDownLatchTest {
     static CountDownLatch latch = new CountDownLatch(3);//创建计数器并设置初始值为3
