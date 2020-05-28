@@ -1,4 +1,4 @@
-package juc;
+package lamda;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -6,9 +6,7 @@ import java.time.temporal.ChronoUnit;
 import java.time.temporal.TemporalAdjusters;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.Comparator;
-import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -17,14 +15,20 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 /**
- * 通过对象的key来过滤对象
+ * 通过对象的某个属性值来过滤对象
  * @author TianGuo
  * @version  2020/5/7
- * @param null
  * @return
  * @see
  */
 public class JavaStreamDistinctExamples {
+
+
+	// 去除ACT_HI_TASKINST 或签导致的重复数据
+	/*
+	 * List<FormInstanceVo> collect = list.stream().collect( collectingAndThen( toCollection(()
+	 * -> new TreeSet<>(comparing(FormInstanceVo::getApprovalNumber))), ArrayList::new));
+	 */
 	public static void main(String[] args) {
 		Person lokesh = new Person(1, "Lokesh", "Gupta");
 		Person brian = new Person(2, "Brian", "Clooney");

@@ -1,4 +1,4 @@
-package juc;
+package lamda;
 
 import java.time.LocalDate;
 import java.util.Arrays;
